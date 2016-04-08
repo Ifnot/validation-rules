@@ -61,6 +61,18 @@ class Validator extends IlluminateValidator
 		return preg_match('#^0[1-9]([-. ]?[0-9]{2}){4}$#', $value);
 	}
 
+	public function validateDepartment($attribute, $value, $parameters)
+	{
+		$departments = json_decode(file_get_contents('http://geo.api.web-6.fr/departments?search[id]=' . $value), true);
+		return count($departments) > 0;
+	}
+
+	public function validateCity($attribute, $value, $parameters)
+	{
+		$cities = json_decode(file_get_contents('http://geo.api.web-6.fr/cities?search[id]=' . $value), true);
+		return count($cities) > 0;
+	}
+
 	/**
 	 * @param $attribute
 	 * @param $value
