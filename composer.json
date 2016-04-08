@@ -1,0 +1,20 @@
+{
+    "name": "ifnot/validation-rules",
+    "description": "",
+    "authors": [
+        {
+            "name": "Anael Favre",
+            "email": "anael.favre@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ifnot\\ValidationRules\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
