@@ -1,12 +1,13 @@
 <?php namespace Ifnot\ValidationRules;
 
+use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Validator as IlluminateValidator;
 
 /**
  * Class ValidationRulesServiceProvider
  * @package Ifnot\ValidationRules
  */
-class ValidationRulesServiceProvider
+class ValidationRulesServiceProvider extends ServiceProvider
 {
 	public function register()
 	{
